@@ -1,0 +1,29 @@
+#-------------Setup----------------
+
+import Ed
+
+Ed.EdisonVersion = Ed.V2
+
+Ed.DistanceUnits = Ed.TIME
+Ed.Tempo = Ed.TEMPO_MEDIUM
+
+#--------Your code below-----------
+
+birthday1 = Ed.TuneString(15, "c4c4d2c2f2e1z")
+birthday2 = Ed.TuneString(15, "c4c4d2c2g2f1z")
+birthday3 = Ed.TuneString(17, "c4c4c2a2f2e2d1z")
+birthday4 = Ed.TuneString(15, "A4A4f2g2f2f2z")
+
+while True:
+	Ed.PlayTune(birthday1)
+	while Ed.ReadMusicEnd()==Ed.MUSIC_NOT_FINISHED:
+	    pass
+	Ed.PlayTune(birthday2)
+	while Ed.ReadMusicEnd()==Ed.MUSIC_NOT_FINISHED:
+	    pass
+	Ed.PlayTune(birthday3)
+	while Ed.ReadMusicEnd()==Ed.MUSIC_NOT_FINISHED:
+	    pass
+	Ed.PlayTune(birthday4)
+	while Ed.ReadMusicEnd()==Ed.MUSIC_NOT_FINISHED:
+	    pass
